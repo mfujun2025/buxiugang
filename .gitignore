@@ -4,4 +4,5 @@ _compress2.py
 _docx_media/
 _docx_media_manifest.txt
 _docx_text.txt
+_count_words.py
 .github/
