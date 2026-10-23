@@ -144,6 +144,17 @@ a{color:inherit;text-decoration:none}
 .news-item h3 a:hover{color:var(--accent)}
 .news-item p{font-size:13.5px;color:var(--ink-dim);margin-top:8px;line-height:1.75}
 .news-item time{font-size:12.5px;color:var(--ink-faint);flex:none;white-space:nowrap}
+/* ===== 分页 ===== */
+.pagination{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin-top:40px}
+.pagination a{
+  min-width:42px;height:42px;padding:0 12px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);background:var(--bg-panel);color:var(--ink-dim);border-radius:var(--radius);
+  font-size:14px;font-weight:600;transition:all .2s;
+}
+.pagination a:hover{color:var(--ink);border-color:var(--accent)}
+.pagination a.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.pagination a.disabled{opacity:.4;pointer-events:none}
+.pagination .dots{color:var(--ink-faint);padding:0 4px;user-select:none}
 /* ===== 联系 ===== */
 .contact{background:var(--bg-deep);border-top:1px solid var(--line)}
 .contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
@@ -473,6 +484,7 @@ s.parentNode.insertBefore(hm, s);
       </div>
       <!-- AUTO-NEWS-ITEMS END -->
     </div>
+    <nav class="pagination" id="pagination" aria-label="资讯分页"></nav>
   </div>
 </section>
 
@@ -543,6 +555,62 @@ s.parentNode.insertBefore(hm, s);
   nav.addEventListener('click',function(e){
     if(e.target.tagName==='A'){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
   });
+})();
+</script>
+
+<script>
+(function(){
+  var PAGE_SIZE = 9;
+  var list = document.getElementById('newsList');
+  var pager = document.getElementById('pagination');
+  if(!list || !pager) return;
+  var items = Array.prototype.slice.call(list.querySelectorAll('.news-item'));
+  var total = items.length;
+  var pageCount = Math.max(1, Math.ceil(total / PAGE_SIZE));
+
+  function getPage(){
+    var m = /[?&]page=(\d+)/.exec(location.search);
+    var p = m ? parseInt(m[1],10) : 1;
+    if(isNaN(p) || p < 1) p = 1;
+    if(p > pageCount) p = pageCount;
+    return p;
+  }
+  function buildHref(p){ return p === 1 ? 'news.html' : 'news.html?page=' + p; }
+
+  function renderPager(cur){
+    var html = '<a href="' + buildHref(cur-1) + '"' + (cur===1?' class="disabled"':'') + ' aria-label="上一页">‹</a>';
+    for(var i=1;i<=pageCount;i++){
+      var far = pageCount>7 && i>2 && i<pageCount-1 && Math.abs(i-cur)>1;
+      if(far){
+        if(i===3 || i===pageCount-2){ html += '<span class="dots">…</span>'; }
+        continue;
+      }
+      html += '<a href="' + buildHref(i) + '"' + (i===cur?' class="active"':'') + '>' + i + '</a>';
+    }
+    html += '<a href="' + buildHref(cur+1) + '"' + (cur===pageCount?' class="disabled"':'') + ' aria-label="下一页">›</a>';
+    pager.innerHTML = html;
+    Array.prototype.forEach.call(pager.querySelectorAll('a'), function(a){
+      if(a.classList.contains('disabled')) return;
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        var np = parseInt(a.textContent,10);
+        if(isNaN(np)){ var mm=/page=(\d+)/.exec(a.getAttribute('href')); np = mm?parseInt(mm[1],10):1; }
+        showPage(np);
+        history.replaceState(null,'',buildHref(np));
+      });
+    });
+  }
+
+  function showPage(p){
+    var start = (p-1)*PAGE_SIZE;
+    items.forEach(function(it,i){
+      it.style.display = (i>=start && i<start+PAGE_SIZE) ? '' : 'none';
+    });
+    renderPager(p);
+    var top = document.getElementById('news');
+    if(top){ var y = top.getBoundingClientRect().top + window.pageYOffset - 80; window.scrollTo({top:y,behavior:'smooth'}); }
+  }
+  showPage(getPage());
 })();
 </script>
 </body>
