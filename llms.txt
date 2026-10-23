@@ -19,3 +19,28 @@
 - 电话：17652523536
 - 地址：上海市宝山区萧云路501号
 - 业务：支持非标定制、来料加工、出口贸易
+
+<!-- AUTO-ARTICLES-LLMS START -->
+## 资讯文章（长尾知识）
+- https://jdiz.cn/news/panguan-price.html — 不锈钢盘管多少钱一米_价格影响因素与报价参考
+- https://jdiz.cn/news/panguan-standard.html — 不锈钢盘管执行标准解读_ASTM A269_API RP 5C7与JIS G4305
+- https://jdiz.cn/news/panguan-316l-vs-304.html — 316L与304不锈钢盘管怎么选_耐蚀性与成本对比
+- https://jdiz.cn/news/kongzhiguanxian-scssv.html — 不锈钢控制管线在井下安全阀SCSSV中的应用与选型
+- https://jdiz.cn/news/kongzhiguanxian-1-4-inch.html — 1/4英寸不锈钢控制管线规格选型与用途
+- https://jdiz.cn/news/kongzhiguanxian-vendor.html — 不锈钢控制管线厂家怎么选_采购避坑指南
+- https://jdiz.cn/news/kaizhuangceshidianlan-vs-normal.html — 铠装测温电缆与普通电缆的区别_结构与选型
+- https://jdiz.cn/news/kaizhuangceshidianlan-downhole.html — 井下测温测压铠装电缆选型指南_芯数与铠装材质
+- https://jdiz.cn/news/kaizhuangceshidianlan-material.html — 铠装测试电缆材质选择_316L_Inconel与成本权衡
+- https://jdiz.cn/news/baosuguan-plastic-layer.html — 不锈钢包塑管塑层对比_PVC_F46_尼龙哪种好
+- https://jdiz.cn/news/baosuguan-chemical.html — 不锈钢包塑管在化工防腐中的应用场景
+- https://jdiz.cn/news/baosuguan-spec.html — 不锈钢包塑管规格参数与耐压_外径壁厚一览
+- https://jdiz.cn/news/lianxuyouguan-workover.html — 不锈钢连续油管在修井作业中的应用指南
+- https://jdiz.cn/news/lianxuyouguan-vs-conventional.html — 连续油管与常规油管区别_各自适用场景
+- https://jdiz.cn/news/lianxuyouguan-price.html — 连续油管多少钱一米_价格影响因素与报价参考
+- https://jdiz.cn/news/maoxiguan-od-table.html — 不锈钢毛细管外径规格对照表_常用尺寸与壁厚
+- https://jdiz.cn/news/maoxiguan-downhole.html — 不锈钢毛细管在井下测压中的应用_原理与选型
+- https://jdiz.cn/news/maoxiguan-316l-vs-304.html — 毛细管304与316L怎么选_材质与耐蚀对比
+- https://jdiz.cn/news/material-guide.html — 不锈钢精密管材材质怎么选_304_316L_2205双相钢对比
+- https://jdiz.cn/news/downhole-solution.html — 油气田井下管材配套方案_盘管控制管线毛细管协同
+- https://jdiz.cn/news/export-standard.html — 不锈钢管材出口标准与包装运输指南
+<!-- AUTO-ARTICLES-LLMS END -->
