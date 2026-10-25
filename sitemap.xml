@@ -242,4 +242,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://jdiz.cn/news/seo-maoxiguan-20261026.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
