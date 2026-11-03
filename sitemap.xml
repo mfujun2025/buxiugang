@@ -274,4 +274,10 @@
 <url><loc>https://jdiz.cn/news/seo-kaizhuangceshidianlan-20261101.html</loc><lastmod>2026-11-01</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://jdiz.cn/news/seo-baosuguan-20261102.html</loc><lastmod>2026-11-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://jdiz.cn/news/seo-lianxuyouguan-20261103.html</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url>
+    <loc>https://jdiz.cn/news/seo-maoxiguan-20261103.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
